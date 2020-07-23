@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.travel.stage.cms.route.mapper.TravelRouteMapper">
+  <resultMap id="BaseResultMap" type="com.zzp.travel.stage.cms.route.domain.TravelRoute">
+    <!--@mbg.generated-->
+    <!--@Table t_cms_travel_route-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ADD_USER_ID" jdbcType="VARCHAR" property="addUserId" />
+    <result column="ADD_TIME" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="DELETE_STATUS" jdbcType="INTEGER" property="deleteStatus" />
+    <result column="MODIFY_USER_ID" jdbcType="VARCHAR" property="modifyUserId" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    <result column="START_SITE" jdbcType="VARCHAR" property="startSite" />
+    <result column="END_SITE" jdbcType="VARCHAR" property="endSite" />
+    <result column="END_TIME" jdbcType="VARCHAR" property="endTime" />
+    <result column="START_TIME" jdbcType="VARCHAR" property="startTime" />
+    <result column="DAY" jdbcType="INTEGER" property="day" />
+    <result column="PRODUCT_CODE" jdbcType="VARCHAR" property="productCode" />
+    <result column="PRICE" jdbcType="DOUBLE" property="price" />
+    <result column="STATE" jdbcType="INTEGER" property="state" />
+    <result column="IMG_URL" jdbcType="VARCHAR" property="imgUrl" />
+    <result column="INTRO" jdbcType="VARCHAR" property="intro" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, TITLE, START_SITE, 
+    END_SITE, END_TIME, START_TIME, `DAY`, PRODUCT_CODE, PRICE, `STATE`, IMG_URL, INTRO
+  </sql>
+  <select id="count" resultType="long">
+    SELECT count(*) FROM t_cms_travel_route WHERE DELETE_STATUS=0
+  </select>
+  <select id="count2" resultType="long">
+    SELECT count(*) FROM t_cms_travel_route WHERE DELETE_STATUS=0 AND STATE=1
+  </select>
+  <select id="findById" resultMap="BaseResultMap">
+    SELECT * FROM t_cms_travel_route WHERE ID = #{id} AND DELETE_STATUS=0
+  </select>
+  <select id="findList" resultMap="BaseResultMap">
+    SELECT * FROM t_cms_travel_route WHERE DELETE_STATUS=0 ORDER BY ADD_TIME DESC
+  </select>
+  <select id="indexList" resultMap="BaseResultMap">
+    SELECT * FROM t_cms_travel_route WHERE DELETE_STATUS=0 AND STATE=1 ORDER BY ADD_TIME DESC
+  </select>
+  <select id="findListByQuery" resultMap="BaseResultMap">
+    SELECT * FROM t_cms_travel_route WHERE DELETE_STATUS=0 AND TITLE LIKE #{query,jdbcType=VARCHAR} ORDER BY ADD_TIME DESC
+  </select>
+  <update id="update">
+    UPDATE t_cms_travel_route SET MODIFY_USER_ID=#{modifyUserId},MODIFY_TIME=NOW(),TITLE=#{title},
+                START_SITE=#{startSite},END_SITE=#{endSite},END_TIME=#{endTime},START_TIME=#{startTime},DAY=#{day},
+                PRODUCT_CODE=#{productCode},PRICE=#{price},STATE=#{state},IMG_URL=#{imgUrl},INTRO=#{intro} WHERE id=#{id}
+  </update>
+  <insert id="save">
+    UPDATE t_cms_travel_route SET MODIFY_USER_ID=#{modifyUserId},MODIFY_TIME=NOW(),TITLE=#{title},
+                START_SITE=#{startSite},END_SITE=#{endSite},END_TIME=#{endTime},START_TIME=#{startTime},DAY=#{day},
+                PRODUCT_CODE=#{productCode},PRICE=#{price},STATE=#{state},IMG_URL=#{imgUrl},INTRO=#{intro} WHERE id=#{id}
+  </insert>
+  <update id="deleteById">
+    UPDATE t_cms_travel_route SET DELETE_STATUS=1 WHERE id=#{id}
+  </update>
+
+  <select id="state0count" resultType="long">
+    SELECT count(*) FROM t_cms_travel_route WHERE DELETE_STATUS=0 AND STATE=0
+  </select>
+  <select id="state1count" resultType="long">
+    SELECT count(*) FROM t_cms_travel_route WHERE DELETE_STATUS=0 AND STATE=1
+  </select>
+  <select id="state2count" resultType="long">
+    SELECT count(*) FROM t_cms_travel_route WHERE DELETE_STATUS=0 AND STATE=2
+  </select>
+</mapper>

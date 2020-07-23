@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.travel.stage.cms.order.mapper.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.zzp.travel.stage.cms.order.domain.Order">
+    <!--@mbg.generated-->
+    <!--@Table traveldemo.t_yw_order-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ADD_USER_ID" jdbcType="VARCHAR" property="addUserId" />
+    <result column="ADD_TIME" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="DELETE_STATUS" jdbcType="INTEGER" property="deleteStatus" />
+    <result column="MODIFY_USER_ID" jdbcType="VARCHAR" property="modifyUserId" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="PRODUCT_ID" jdbcType="VARCHAR" property="productId" />
+    <result column="PRODUCT_NAME" jdbcType="VARCHAR" property="productName" />
+    <result column="FEE" jdbcType="DOUBLE" property="fee" />
+    <result column="PRODUCT_TYPE" jdbcType="INTEGER" property="productType" />
+    <result column="STATE" jdbcType="INTEGER" property="state" />
+    <result column="ORDER_CODE" jdbcType="VARCHAR" property="orderCode" />
+    <result column="ORDER_TIME" jdbcType="VARCHAR" property="orderTime" />
+    <result column="SETOFF_TIME" jdbcType="VARCHAR" property="setoffTime" />
+    <result column="LINK_TEL" jdbcType="VARCHAR" property="linkTel" />
+    <result column="PEOPLE_COUNT" jdbcType="INTEGER" property="peopleCount" />
+    <result column="REQUIREMENT" jdbcType="VARCHAR" property="requirement" />
+    <result column="IC_CODE" jdbcType="VARCHAR" property="icCode" />
+    <result column="IMG_URL" jdbcType="VARCHAR" property="imgUrl" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, USER_ID, USER_NAME, 
+    PRODUCT_ID, PRODUCT_NAME, FEE, PRODUCT_TYPE, `STATE`, ORDER_CODE, ORDER_TIME, SETOFF_TIME, 
+    LINK_TEL, PEOPLE_COUNT, REQUIREMENT, IC_CODE, IMG_URL
+  </sql>
+</mapper>

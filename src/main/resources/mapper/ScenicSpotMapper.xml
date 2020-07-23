@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.travel.stage.cms.scenicSpot.mapper.ScenicSpotMapper">
+  <resultMap id="BaseResultMap" type="com.zzp.travel.stage.cms.scenicSpot.domain.ScenicSpot">
+    <!--@mbg.generated-->
+    <!--@Table t_cms_scenic_spot-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ADD_USER_ID" jdbcType="VARCHAR" property="addUserId" />
+    <result column="ADD_TIME" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="DELETE_STATUS" jdbcType="INTEGER" property="deleteStatus" />
+    <result column="MODIFY_USER_ID" jdbcType="VARCHAR" property="modifyUserId" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="SPOT_NAME" jdbcType="VARCHAR" property="spotName" />
+    <result column="SPOT_INTRO" jdbcType="VARCHAR" property="spotIntro" />
+    <result column="SPOT_STAR" jdbcType="INTEGER" property="spotStar" />
+    <result column="SPOT_ADDRESS" jdbcType="VARCHAR" property="spotAddress" />
+    <result column="OPEN_TIME" jdbcType="VARCHAR" property="openTime" />
+    <result column="TICKETS_MESSAGE" jdbcType="DOUBLE" property="ticketsMessage" />
+    <result column="STATE" jdbcType="INTEGER" property="state" />
+    <result column="IMG_URL" jdbcType="VARCHAR" property="imgUrl" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, SPOT_NAME, 
+    SPOT_INTRO, SPOT_STAR, SPOT_ADDRESS, OPEN_TIME, TICKETS_MESSAGE, `STATE`, IMG_URL
+  </sql>
+</mapper>

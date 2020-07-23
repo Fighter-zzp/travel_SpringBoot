@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.travel.stage.cms.car.mapper.CarMapper">
+  <resultMap id="BaseResultMap" type="com.zzp.travel.stage.cms.car.domain.Car">
+    <!--@mbg.generated-->
+    <!--@Table traveldemo.t_cms_car-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ADD_USER_ID" jdbcType="VARCHAR" property="addUserId" />
+    <result column="ADD_TIME" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="DELETE_STATUS" jdbcType="INTEGER" property="deleteStatus" />
+    <result column="MODIFY_USER_ID" jdbcType="VARCHAR" property="modifyUserId" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    <result column="START_PLACE" jdbcType="VARCHAR" property="startPlace" />
+    <result column="END_PLACE" jdbcType="VARCHAR" property="endPlace" />
+    <result column="START_DATE_AND_TIME" jdbcType="VARCHAR" property="startDateAndTime" />
+    <result column="NEED_TIME" jdbcType="DOUBLE" property="needTime" />
+    <result column="GATHER_PLACE" jdbcType="VARCHAR" property="gatherPlace" />
+    <result column="TYPE" jdbcType="INTEGER" property="type" />
+    <result column="IMG_URL" jdbcType="VARCHAR" property="imgUrl" />
+    <result column="STATE" jdbcType="INTEGER" property="state" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="PRICE" jdbcType="DOUBLE" property="price" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, TITLE, START_PLACE, 
+    END_PLACE, START_DATE_AND_TIME, NEED_TIME, GATHER_PLACE, `TYPE`, IMG_URL, `STATE`, 
+    REMARK, PRICE
+  </sql>
+</mapper>

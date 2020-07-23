@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.travel.stage.role.user.mapper.ProvinceMapper">
+  <resultMap id="BaseResultMap" type="com.zzp.travel.stage.role.user.domain.Province">
+    <!--@mbg.generated generated on Thu Jun 25 23:47:45 CST 2020.-->
+    <!--@Table t_pz_province-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Thu Jun 25 23:47:45 CST 2020.-->
+    id, province
+  </sql>
+</mapper>

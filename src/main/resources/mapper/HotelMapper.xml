@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzp.travel.stage.cms.hotel.mapper.HotelMapper">
+  <resultMap id="BaseResultMap" type="com.zzp.travel.stage.cms.hotel.domain.Hotel">
+    <!--@mbg.generated-->
+    <!--@Table t_cms_hotel-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ADD_USER_ID" jdbcType="VARCHAR" property="addUserId" />
+    <result column="ADD_TIME" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="DELETE_STATUS" jdbcType="INTEGER" property="deleteStatus" />
+    <result column="MODIFY_USER_ID" jdbcType="VARCHAR" property="modifyUserId" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="HOTEL_NAME" jdbcType="VARCHAR" property="hotelName" />
+    <result column="HOTEL_INTRO" jdbcType="VARCHAR" property="hotelIntro" />
+    <result column="HOTEL_STAR" jdbcType="INTEGER" property="hotelStar" />
+    <result column="LINK_PHONE" jdbcType="VARCHAR" property="linkPhone" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="STATE" jdbcType="INTEGER" property="state" />
+    <result column="IMG_URL" jdbcType="VARCHAR" property="imgUrl" />
+    <result column="PRICE" jdbcType="DOUBLE" property="price" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, HOTEL_NAME, 
+    HOTEL_INTRO, HOTEL_STAR, LINK_PHONE, ADDRESS, `STATE`, IMG_URL, PRICE
+  </sql>
+</mapper>
