@@ -18,7 +18,7 @@
         <java.version>11</java.version>
         <mapper.version>2.1.5</mapper.version>
         <knife4j.version>2.0.3</knife4j.version>
-        <fastjson.version>1.2.62</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <pagehelper.version>1.2.13</pagehelper.version>
         <jstl.version>1.2</jstl.version>
     </properties>
